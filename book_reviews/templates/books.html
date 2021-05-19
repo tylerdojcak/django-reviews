@@ -7,6 +7,7 @@
     <title>books</title>
 </head>
 <body>
+    <h2>There {{ count|pluralize:"is, are" }} currently {{ count }} book{{ count|pluralize }} in our database.</h2>
     <ul>
         <li>a</li>
         <li>couple</li>
