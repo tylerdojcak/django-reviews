@@ -8,7 +8,7 @@ def index(request):
     context = {
         'count': count,
     }
-    return render(request, 'template.html', context)
+    return render(request, 'index.html', context)
 
 def books(request):
     count = Book.objects.all().count()
