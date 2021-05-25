@@ -2,3 +2,8 @@
     width: 500px;
     margin: 15px 40px;
 }
+
+.form-container .btn {
+    margin: 50px;
+    background-color: black;
+}

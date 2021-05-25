@@ -1,23 +1,20 @@
 {% extends 'base.html' %}
 
-
-
 {% block content %}
     {% load static %}
+    <h3>Log in:</h3>
+
     {% load crispy_forms_tags %}
-    <h3>Sign up:</h3>
     <div class="form-container">
-        <form action="" method="POST" class="uniForm">
+        <form action="" method="POST" class="form-tag">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-success">Log in</button>
         </form>
     </div>
 
     <div>
-        <p>Already have an account? Sign in <a href="{% url 'login' %}">here</a></p>
+        <p>Dont have an account? Sign up <a href="{% url 'register' %}">here</a>.</p>
     </div>
 
-
-    
 {% endblock %}
