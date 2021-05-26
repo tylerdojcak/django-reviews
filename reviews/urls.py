@@ -22,6 +22,7 @@ urlpatterns = [
     path('', book_review_views.index, name='index'),
     path('accounts/', account_views.register, name='register'),
     path('books/', include('book_reviews.urls'), name='books'),
+    path('books/add', book_review_views.add_book, name='add_book'),
     path('', include('django.contrib.auth.urls'), name='login'),
     path('admin/', admin.site.urls),
 ]
