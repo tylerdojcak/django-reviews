@@ -12,10 +12,12 @@ def index(request):
     return render(request, 'index.html', context)
 
 def books(request):
+    books = Book.objects.all()
     count = Book.objects.all().count()
     context = {
         'count': count,
-        'title': 'Library'
+        'title': 'Library',
+        'books': books,
     }
     return render(request, 'books.html', context)
 
