@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
+{% load bootstrap4 %}
     <h3>Add a review for a book in the library.</h3> 
     <h4>Can't find the book you're looking for? <a href="{% url 'add_book' %}">Add it here.</a></h4>
 
@@ -8,7 +10,17 @@
     {% for book in books %}
         <li>
             <i><u>{{ book.title }}</u></i> by <strong>{{ book.author }}</strong>
-            pub. {{ book.publish_date }}
+            pub. {{ book.publish_date }} <br>
+            <p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#{{ book.title }}" aria-expanded="false" aria-controls="collapseExample">
+                  Description
+                </button>
+              </p>
+              <div class="collapse" id="{{ book.title }}">
+                <div class="card card-body">
+                  {{ book.description }}
+                </div>
+              </div>
         </li>
     {% endfor %}
     </ul>
