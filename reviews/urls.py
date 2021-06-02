@@ -24,7 +24,7 @@ urlpatterns = [
     path('accounts/', account_views.register, name='register'),
     path('books/', include('book_reviews.urls'), name='books'),
     path('books/add', book_review_views.add_book, name='add_book'),
-    path('login/', auth_views.LoginView.as_view(extra_context={'title': 'test extra_content'}), name='login'), # override
+    path('login/', auth_views.LoginView.as_view(extra_context={'title': 'Sign In'}), name='login'), # override
     path('', include('django.contrib.auth.urls'), name='login'),
     path('admin/', admin.site.urls),
 ]
