@@ -12,11 +12,11 @@
             <i><u>{{ book.title }}</u></i> by <strong>{{ book.author }}</strong>
             pub. {{ book.publish_date }} <br>
             <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#{{ book.title }}" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#book{{ book.id }}" aria-expanded="false" aria-controls="book{{ book.id }}">
                   Description
                 </button>
               </p>
-              <div class="collapse" id="{{ book.title }}">
+              <div class="collapse" id="book{{ book.id }}">
                 <div class="card card-body">
                   {{ book.description }}
                 </div>

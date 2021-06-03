@@ -13,3 +13,4 @@ class Book(models.Model):
     publish_date = models.DateField(default=datetime.date.today)
     purchase_link = models.CharField(max_length=450, default='http://www.amazon.com')
     reviews = models.JSONField(default=my_default)
+    

@@ -6,6 +6,7 @@
 <h3>Add a book to the library.</h3>
 
 {{ message }}
+<p><a href="{% url 'books' %}">{{ redirect }}</a></p>
 
 <form action="{% url 'add_book' %}" method="POST">
     {% csrf_token %}
